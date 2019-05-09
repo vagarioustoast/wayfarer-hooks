@@ -16,6 +16,8 @@ const PostContainer = ({ match }) => {
     };
     getPost();
   }, [match.params.postId]);
+
+  const postOrLoading = post ? <Post post={post} /> : <h2>Loading ...</h2>;
   return (
     <div>
       <h1>Post Container</h1>
